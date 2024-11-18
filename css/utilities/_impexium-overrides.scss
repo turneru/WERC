@@ -1,0 +1,152 @@
+@use '../base/variables' as var;
+
+#dnnMenu .topLevel li {
+	margin-right: 50px;
+}
+
+#main_pnlSiteTemplateHeader, #main_pnlSiteTemplateFooter {
+    padding: 0;
+    background: #fff;
+}
+
+#main_pnlSiteTemplateHeader #header {
+	font-size: 1.6rem;
+	font-weight: 400;
+	font-family: "Poppins", sans-serif;
+	color: #000000;
+	background: #ffffff;
+	line-height: 24px;
+}
+
+.btn.green {
+	background-color: var.$green;
+
+	&:hover {
+		background-color: #509969 !important;
+	}
+}
+
+.btn.blue {
+	background-color: var.$blue;
+	
+	&:hover {
+		background-color: #2d4682 !important;
+	}
+}
+
+.label-success, .badge-success {
+	background-color: var.$green;
+}
+
+ul.page-sidebar-menu > li.active > a, ul.page-sidebar-menu > li.active > span > a {
+	background: var.$green !important;
+}
+
+ul.page-sidebar-menu > li.active > a .selected, ul.page-sidebar-menu > li.active > span > a .selected {
+	background-image: none;
+}
+
+.ver-inline-menu li.active a, .ver-inline-menu li.active i {
+	background: var.$blue;
+}
+
+.ver-inline-menu li.active a {
+	border-left: solid 2px #2d4682;
+}
+
+.ver-inline-menu li.active i {
+	background: #2d4682 !important;
+}
+
+.tabbable-custom .nav-tabs>li.active {
+	border-top: 3px solid var.$red;
+}
+
+.button-secondary:after, .btn-secondary:after, button-secondary:after {
+	content: "\f061";
+	font-family: "Font Awesome 5 Free";
+    margin-left: 10px;
+	transition: all 0.4s ease 0s;
+}
+
+#footer {
+	font-weight: 400;
+	font-family: "Poppins", sans-serif;
+}
+
+#footer .left-side .subscribe .button-secondary {
+	font-weight: 600 !important;
+	background-color: transparent !important;
+	border-color: transparent;
+	text-decoration: none !important;
+	letter-spacing: 0.05em;
+	line-height: 20px;
+	display: inline-block;
+	text-transform: lowercase;
+	color: #fff !important;
+	font-size: 16px;
+	margin: 0;
+}
+
+.button-secondary:hover::after, .btn-secondary:hover::after, button-secondary:hover::after {
+	margin-left: 20px;
+}
+
+#footer .right-side .social {
+    display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+#footer .right-side .social a svg {
+    width: 15px;
+	padding-top: 8px;
+}
+
+#footer .right-side .social a svg path {
+   fill: #fff;
+}
+
+#footer .right-side .social a:hover svg path {
+    fill: #0F3152;
+ }
+
+#footer .right-side .social a.social_media, #footer .right-side .social a.social_media:link, #footer .right-side .social a.social_media:visited, #footer .right-side .social a.social_media:active {
+	border-radius: 50% !important;
+}
+
+#footer .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#footer .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media only screen and (max-width: 1550px) {
+	#dnnMenu .topLevel li {
+		margin-right: 30px;
+	}
+}
+
+@media only screen and (max-width: 1425px) {
+	#dnnMenu .topLevel li {
+		margin-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 1360px) {
+	#dnnMenu .topLevel li {
+		margin-right: 5px;
+	}
+}
+
+@media only screen and (max-width: 1275px) {
+	#dnnMenu .topLevel li a {
+		font-size: 1.5rem;
+		padding: 8px 10px;
+		letter-spacing: 0.04em;
+	}
+}

@@ -1,0 +1,217 @@
+@use '../base/variables' as var;
+
+.slicknav_btn { 
+    position: relative; 
+    display: block; 
+    float: right; 
+    padding: 15px;
+	line-height: 1.125em;
+	cursor: pointer;
+	margin: 10px 5px 10px;
+    text-decoration:none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;  
+    background-color: #fff;
+
+    .slicknav_icon-bar + .slicknav_icon-bar { 
+        margin-top: 0.188em 
+    }
+
+    &.slicknav_open {
+        .slicknav_icon-bar:nth-of-type(1) {
+            transform: rotate(45deg);
+            top: 5px;
+            position: relative;
+            transition: transform 0.25s ease-in-out;
+        }
+        .slicknav_icon-bar:nth-of-type(2) {
+            transform: rotate(-45deg);
+            transition: transform 0.25s ease-in-out;
+        }
+        .slicknav_icon-bar:nth-of-type(3) {
+            display: none;
+        }    
+    } 
+}
+
+.slicknav_menu { 
+    *zoom: 1; 
+    font-size:16px;
+    box-sizing:border-box;
+    background: #fff;
+    padding:0px;
+    position: absolute;
+    width: 100%;
+	z-index: 99999;
+	//transition: all 0.3s ease-out;
+
+    &.open {
+        background: var.$blue;
+
+        .slicknav_btn {
+            background-color: var.$blue;
+
+            .slicknav_menutxt {
+                color: #fff;
+            }
+
+            .slicknav_icon-bar {
+                background-color: #fff;
+            }
+        }
+    }
+
+    * {
+        box-sizing:border-box;
+    }
+
+    .slicknav_menutxt { 
+        display: block; 
+        line-height: 20px; 
+        float: left; 
+        letter-spacing: .05em;
+        text-transform: lowercase;
+        color: var.$navy;
+        font-weight: 600;
+    }
+
+    .slicknav_icon { 
+        float: left; 
+        margin: 0.188em 0 0 0.438em; 
+    }
+
+    .slicknav_no-text { 
+        margin: 0 
+    }
+
+    .slicknav_icon-bar { 
+        display: block; 
+        width: 1.125em; 
+        height: 0.125em; 
+        -webkit-border-radius: 1px; 
+        -moz-border-radius: 1px; 
+        border-radius: 1px; 
+        background-color: var.$navy;
+    }
+
+    &:before {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+.slicknav_nav { 
+    clear: both;
+    color:#fff;
+    margin:0;
+    padding:0px 0px 0px;
+    background: var.$blue;
+    font-size:0.875em;
+    list-style: none;
+    overflow:hidden;
+
+    ul {
+		display: block;
+        list-style: none;
+        overflow:hidden;
+        padding:0;
+        margin:0 0 0 0px;
+	}
+
+	li {
+		display: block;
+        margin-bottom: 0;
+	}
+
+    .slicknav_arrow { 
+        font-size: 0.8em; 
+        margin: 0 15px 0 0; 
+        float: right; 
+    }
+
+    .slicknav_item { 
+        cursor: pointer; 
+    }
+
+    > li.slicknav_parent > a, a.login {
+        border-bottom: 1px solid #fff;
+        padding: 10px 10px 10px 20px;
+        font-weight: 600;
+        text-transform: lowercase;
+        letter-spacing: .05em;
+    }
+
+    a.login {
+        border-bottom: none;
+    }
+
+    .subLevel > ul > li > a {
+        border-bottom: 1px solid #fff;
+        padding: 10px 10px 10px 40px;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: .05em;
+    }
+
+    .slicknav_row { 
+        display: block;
+        padding:5px 10px;
+        margin:2px 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        background: var.$blue;
+        color:#ffffff; 
+
+        &:hover {
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            background: var.$blue;
+            color:#ffffff;
+        }
+    }
+
+    a { 
+        display: block;
+        padding:5px 10px;
+        margin:2px 0px;
+        text-decoration:none;
+        color:#fff !important; 
+
+        &:hover{
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            background: var.$blue;
+            color:#ffffff;
+        }
+    }
+
+    .slicknav_item a, .slicknav_parent-link a { 
+        display: inline-block; 
+        padding:0;
+        margin:0;
+    }
+
+    .slicknav_txtnode {
+        margin-left:15px;   
+    }
+}
+
+.slicknav_brand { 
+    float:left;
+    color:#ffffff;
+	font-size: 18px;
+	line-height:30px;
+	padding:7px 12px;
+	height:44px; 
+}
+

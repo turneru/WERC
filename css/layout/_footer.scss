@@ -1,0 +1,103 @@
+//Footer Layout & Styles
+@use '../base/variables' as var;
+
+#footer {
+  width: 100%;
+  background: url(../images/footer_bg.png) no-repeat top center;
+  background-size: cover;
+  min-height: 424px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 75px;
+
+  .footer-logo {
+    margin: 105px 0 35px;
+    text-align: center;
+  }
+
+  .left-side {
+    .subscribe {
+      margin-bottom: 31px;
+
+      .title {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .button-secondary {
+        color: #fff !important;
+        font-size: 16px;
+        margin: 0;
+
+        &:hover {
+          color: var.$green !important;
+        }
+      }
+    }
+
+    .copyright {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .right-side {
+    text-align: right;
+
+    .social {
+      margin: 11px 0px 42px;
+
+      a.social_media, a.social_media:link, a.social_media:visited, a.social_media:active {
+        color: #fff;
+        background: var.$navy;
+        font-weight: normal;
+        text-decoration: none !important;
+        border-radius: 50%;
+        border: var.$green solid 2px;
+        margin-right: 25px;
+        width: 35px;
+        text-align: center;
+        line-height: 15px;
+        height: 35px;
+        display: inline-block;
+        font-size: 16px;
+        transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, transform 0.2s ease;
+      
+        &:hover {
+          font-weight: normal;
+          text-decoration: none;
+          background: var.$green;
+          border: var.$green solid 2px;
+          color: var.$navy;
+          transform: translate(0px, -10px);
+        }
+      
+        & i {
+          line-height: 32px;
+        }
+      
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  a.footer-link, a.footer-link:link, a.footer-link:visited, a.footer-link:active {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.hidden_link, a.hidden_link:link, a.hidden_link:hover, a.hidden_link:visited {
+  color: var.$navy !important;
+}

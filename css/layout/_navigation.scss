@@ -1,0 +1,199 @@
+//Navigation Layout & Styles
+@use '../base/variables' as var;
+
+#navigation {
+  z-index: 3000;
+  width: 100%;
+  background: var.$nav_bg_color;
+}
+
+.slicknav_menu {
+  display: none;
+}
+
+.nav {
+  margin: 0px auto;
+  text-align: var.$nav_alignment;
+}
+
+// #dnnMenu {
+// 	//display: inline-block;
+// }
+	
+#dnnMenu {
+	.topLevel {
+		position:relative;
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 0px 0px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		li {
+			float:left;
+			margin:0;
+			list-style-type:none;
+			position:relative;
+			margin-right: 60px;
+			margin-top: 0px;
+
+			a {
+				display:block;
+				color: var.$nav_item_color;
+				font-size: var.$nav_item_font_size;
+				font-weight: var.$nav_item_font_weight;
+				text-decoration:none;
+				padding: var.$nav_item_padding;
+				box-sizing: border-box;
+				text-transform: lowercase;
+				letter-spacing: .05em;
+				line-height: 20px;
+
+				&:before {
+					display: block;
+					content: attr(title);
+					font-weight: 700;
+					height: 0;
+					overflow: hidden;
+					visibility: hidden;
+				}
+			}
+
+			&:last-of-type {
+				margin-right: 0px;
+			}
+
+			&:hover .subLevel {
+				display:block;
+				white-space:nowrap;
+			}	
+
+			&.last {
+				.subLevel {
+					display: none !important;
+				}
+			}
+
+		}
+
+		li:hover > a, li > a:hover, > li.selected > a, > li.selected {
+			color: var.$nav_item_hover_color;
+			background: var.$nav_item_hover_bg_color;
+			text-decoration:none;
+			font-weight: 700;
+		}
+	}
+
+	.subLevel {
+		display:none;
+		position:absolute;
+		margin:0;
+		padding:38px 20px 5px;
+		min-width: 230px;
+		z-index:5000;
+		background-color: var.$subnav_bg_color;
+
+		ul {
+			margin:0;
+			padding:0;
+			position:relative;
+			z-index:1200;
+
+			li {
+				float:none;
+				clear:both;
+				margin-right: 0;
+
+				a {
+					display:block;
+					color: var.$subnav_item_color;
+					padding: var.$subnav_item_padding; 
+					text-align: left;
+					border:0px;
+					font-size: var.$subnav_item_font_size;
+					font-weight: var.$subnav_item_font_weight;
+					text-transform: none;
+					text-wrap: wrap;
+
+					&::before {
+						display: block;
+						content: attr(title);
+						font-weight: 700;
+						height: 0;
+						overflow: hidden;
+						visibility: hidden;
+					}
+
+					&:hover {
+						color: var.$subnav_item_hover_color;
+						background-color: var.$subnav_item_hover_bg_color;
+						font-weight: 700;
+
+						&:after {
+							content: "\f178";
+							font-family: "Font Awesome 6 Pro";
+							font-weight: 900;
+							margin-left: 10px;
+						}
+					}
+				}
+
+				&.first > .subLevelRight{
+					top:0px;
+				}
+
+				&.first.last > .subLevelRight{
+					top:2px;
+				}
+
+				&.hover > .subLevelRight{
+					display:none;
+				}
+
+				&.first > .subLevelRight li.first > .subLevelRight {
+					top:0px;
+				}
+
+			}
+		}
+	}
+
+	.subLevelRight {
+		display:none;
+		position:absolute;
+		left:100%;
+		top:0px;
+		width:300px;
+		margin:0 0 0 0px;
+
+		ul {
+			display:block;
+		
+			li {
+				position:relative;
+
+				a {
+					display:block;
+
+					div {
+						display:block;
+						white-space:nowrap;
+					}
+				}
+
+				&.first > a {
+					background-image:none;
+
+					div {
+						background-image:none;
+					}
+				}
+
+				&.first.last > a div {
+					background-image:none;
+				}
+			}
+		}
+	}
+}

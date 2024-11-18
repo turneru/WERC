@@ -1,0 +1,149 @@
+@use '../base/variables' as var;
+@import '../utilities/components';
+
+// Prospectus page Layout & Styles
+
+#prospectus-page-title {
+    background: url(../images/prospectus_page_title_bg.png) no-repeat top center;
+    @include page-title;
+
+    &.subpage {
+        padding-top: 0px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+#prospectus-nav {
+    background: var.$navy;
+
+    #eventMenu {
+        margin-bottom: 0px;
+        vertical-align: top;
+
+       .topLevel li a {
+            text-transform: none;
+        }
+    }
+
+    &.subpage {
+        margin-bottom: 70px;
+    }
+}
+
+#body-content.prospectus {
+    h1 {
+        color: var.$navy;
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    #green-stat {
+        position: absolute;
+        right: 578px;
+        margin-top: 0;
+    }
+
+    #red-stat {
+        position: absolute;
+        right: 324px;        
+        margin-top: 141px;
+    }    
+    
+    #yellow-stat {
+        position: absolute;
+        right: 0;
+        margin-top: 28px;
+    }
+
+    .callout {
+        @include alt-callout;
+        
+        p {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #000000;
+            font-style: normal;
+            line-height: 24px;
+        }
+    }
+
+    #prospectus-top {
+        margin-top: 97px;
+
+        .Invisible {
+            padding: 0px;
+        }
+
+        .row {
+            min-height: 390px;
+        }
+    
+        .prospectus-text {
+            padding-left: 0px;
+    
+            h1 {
+                margin-top: 62px;
+                margin-bottom: 30px;
+            }
+        
+            p {
+                font-weight: 500;
+                color: var.$navy;
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+    
+        .prospectus-img {
+            position: relative;
+    
+            img.prospectus-image {
+                position: absolute;
+                left: 0;
+            }
+    
+            img.lines-red-yellow {
+                @include circle-lines;
+            }
+        } 
+    }
+    
+    #prospectus-events {
+        background: var.$blue;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+    
+            span {
+                -webkit-text-stroke: 1.5px #fff;
+            }
+        }
+
+        p {
+            @include events-intro-p;
+        }
+
+        .button {
+            color: #fff !important;
+            margin-bottom: 0;
+
+            &:hover {
+                color: var.$navy !important;
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    #prospectus-bottom {
+        margin: 100px 0px;
+
+        .Invisible {
+            padding: 0px;
+        }
+    }
+}

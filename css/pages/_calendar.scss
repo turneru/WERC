@@ -1,0 +1,198 @@
+@use '../base/variables' as var;
+@import '../utilities/components';
+
+// Calendar Layout & Styles
+
+#calendar_628_ {
+	margin: 50px 0px;
+}
+
+.fc-head-container.fc-widget-header table {
+	margin-bottom: 0;
+}
+
+a.fc-day-number {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.fc-state-default {
+	border: 6px solid;
+	background-color: #fff;
+	background-image: none;
+	background-repeat: repeat-x;
+	border-color: #68C187;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	color: #0F3152;
+	text-shadow: none;
+	box-shadow: none;
+}
+
+.fc-state-active {
+	color: #0F3152 !important;
+	font-weight: 700 !important;
+	border-color: #68C187;
+	text-decoration: none;
+	outline: 0;
+	box-shadow: inset 0 -3.25em 0 0 #68C187;
+}
+
+.fc .fc-button-group>* {
+	margin: 0 0 0 20px;
+}
+
+.fc button {
+	height: auto;
+	padding: 10px .6em 5px;
+}
+
+.fc-state-default.fc-corner-right {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.fc-state-default.fc-corner-left {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.fc-state-disabled {
+	opacity: 1;
+}
+
+.fc-unthemed td.fc-today {
+	background: #EFEDE6;
+}
+
+.fc-day-grid-event .fc-content {
+	color: #fff;
+}
+
+a.fc-event {
+	color: #fff;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.fc-day-header.fc-widget-header a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}	
+}
+
+.fc-day-grid-event {
+	margin: 1px 2px 0;
+	padding: 5px;
+}
+
+.fc-event, .fc-event-dot {
+	background-color: var.$blue;
+}
+
+.fc-event {
+	position: relative;
+	display: block;
+	font-size: 14px;
+	line-height: 1.3;
+	border-radius: 0;
+	border: none;
+}
+
+.qtip.edn_calendarbox_sb_skin > .qtip-content > .wrapper > .article > a {
+	background: none;
+}
+
+.qtip.edn_calendarbox_sb_skin {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 0;
+	background: #fff;
+	border: 3px solid var.$green;
+	border-radius: 2px;
+	box-shadow: none;
+	width: 500px;
+	max-width: 95%;
+
+	.category-date {
+		@include rotator-category;
+	}
+
+	.title {
+		@include rotator-title;
+	}
+}
+
+
+
+.calendar-event-article-card {
+	padding: 25px 0px;
+	width:100%;
+	box-sizing: border-box;
+
+	.event-date-circle {
+		text-align: center;
+		color: #ffffff;
+		width: 115px;
+		height: 115px;
+		padding: 15px 0px;
+		background: var.$green;
+		border-radius: 50%;
+		box-sizing: border-box;
+
+		&.Foundation, &.Walk {
+			background: var.$green;
+		}
+
+		&.Industry {
+			background: var.$navy;
+		}
+
+		&.Webinar {
+			background: var.$blue;
+		}
+
+		&.Conference {
+			background: var.$red;
+		}
+
+		.event-date-day {
+			font-size: 50px;
+			font-weight: 600;
+			line-height: 55px;
+			display: block;
+		}
+	
+		.event-date-month {
+			font-size: 2rem;
+			font-weight: 500;
+			display: block;
+			text-transform: uppercase;
+		}
+	}
+	
+	.event-category {
+		@include rotator-category;
+	}
+
+	.event-title {
+		@include rotator-title;
+	}
+
+	.event-date-time {
+		@include rotator-date-time-tags;
+	}
+
+	.button-secondary {
+		margin-top: 15px;
+	}
+}

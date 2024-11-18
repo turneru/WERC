@@ -1,0 +1,116 @@
+@use '../base/variables' as var;
+
+#article_content {
+    width: 100%;
+}
+
+.article_card {
+    display: inline-block;
+
+    a.title_link {
+        color: var.$body_color;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+}
+
+.eds_news_sb_skin.eds_subCollection_news .article_pager {
+    a.page {
+        color: var.$primary_color;
+        padding: 6px 8px;
+        margin: 0 8px 0 0;
+        line-height: 16px;
+        border: 1px solid var.$primary_color;
+        background: #fff;
+    
+        &.active {
+            background: var.$primary_color;
+            border: 1px solid var.$primary_color;
+            color: #fff;
+        }
+    }
+
+    a.first, a.prev, a.next, a.last {
+        text-transform: lowercase;
+        color: var.$secondary_color;
+        margin: 0 5px 0 0;
+    }
+}
+.eds_news_sb_skin.eds_subCollection_news .ednMoreArticlesTriggerWrapper {
+	margin: 50px 0 20px;
+}
+
+.eds_news_sb_skin.eds_subCollection_news .ednMoreArticlesTriggerWrapper > button.trigger {
+    display: inline-block;
+    padding: 9px 30px 4px;
+    color: var.$navy !important;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700 !important;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 5px solid var.$green;
+    letter-spacing: 0.15em;
+    line-height: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    transition: box-shadow 0.35s ease-in;
+    -o-transition: box-shadow 0.35s ease-in;
+    -ms-transition: box-shadow 0.35s ease-in;
+    -moz-transition: box-shadow 0.35s ease-in;
+    -webkit-transition: box-shadow 0.35s ease-in;
+}
+
+.eds_news_sb_skin.eds_subCollection_news .ednMoreArticlesTriggerWrapper * {
+    font-size: inherit;
+}
+
+.eds_news_sb_skin.eds_subCollection_news .ednMoreArticlesTriggerWrapper > button.trigger > span.actionTextContainer span {
+    font-size: 14px;
+    color: #0F3152 !important;
+    text-shadow: none;
+    -webkit-transition: none;
+    -khtml-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.sponsored-flag {
+    position: absolute;
+	top: 0;
+	right: 0;
+	background: var.$yellow;
+	padding: 10px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: .1em;
+    font-weight: 500;
+	color: var.$navy;
+}
+
+.featured-news-card .sponsored-flag {
+    right: 43px;
+}
+
+.gated-content {
+    position: absolute;
+	top: 0;
+	right: 30px;
+
+    img {
+        width: 53px;
+    }
+}
+
+.featured-news-card .gated-content {
+    right: 73px;
+}

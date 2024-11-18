@@ -1,0 +1,64 @@
+//Header Styles
+@use '../base/variables' as var;
+
+#header {
+  width: 100%;
+  padding: 0 100px 24px;
+  position: relative;
+  z-index: 999;
+  background: #fff;
+
+  .top-links {
+    text-align: right;
+
+    a, a:link, a:visited {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .05rem;
+      line-height: 20px;
+      color: var.$navy;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-bottom: 5px solid #fff;
+      padding: 0px 8px 5px;
+      margin-left: 30px;
+
+      &:hover {
+        font-weight: 600;
+        border-bottom: 5px solid var.$green;
+      }
+
+      &::before {
+        display: block;
+        content: attr(title);
+        font-weight: 600;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
+
+      &.login {
+        padding: 16px 13px 10px;
+        background: var.$green;
+        border: 2px solid var.$green;
+        font-weight: 600;
+
+        &:hover {
+          background: #fff;
+          border-top: 2px solid #fff;
+        }
+      }
+    }
+  }
+
+  .logo-nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .logo-nav-row:after {
+    content: none;
+  }
+}

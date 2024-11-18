@@ -1,0 +1,137 @@
+//Navigation Layout & Styles
+@use '../base/variables' as var;
+
+#eventMenu {
+	display: inline-block;
+	width: 100%; 
+	background: var.$navy;
+	margin-top: 0;
+	margin-bottom: 50px;
+
+    .topLevel {
+        position:relative;
+        padding:0px 0px 0px 0px;
+        margin:0px 0px 0px 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around; 
+        align-items: center;
+
+        li {
+            float:left;
+            margin:0;
+            list-style-type:none;
+            position:relative;
+
+            a {
+                display:block;
+                color: #fff;
+				font-size: 15px;
+				font-weight: 600;
+				text-decoration:none;
+                text-transform: lowercase;
+				padding: 14px;
+				box-sizing: border-box;
+                letter-spacing: .05em;
+				line-height: 20px;
+
+                &:before {
+                    display: block;
+                    content: attr(title);
+                    font-weight: 700;
+                    height: 0;
+                    overflow: hidden;
+                    visibility: hidden;
+                }
+            }
+
+            &.selected {
+                background: #68C187;
+
+                > a {
+                    color: #0F3152;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+            }
+
+            &:hover {
+                background: var.$nav_item_hover_bg_color;
+            }
+
+            &:hover > a, a:hover{
+                color: var.$nav_item_hover_color;
+                text-decoration:none;
+                font-weight: 700;
+            }
+
+            &:hover .subLevel{
+                display:block !important;
+                white-space:nowrap;
+            }
+        }
+    }
+
+    .subLevel{
+        display:none;
+        position: absolute;
+        min-width: 280px;
+        width: 100%;
+        margin:0;
+        padding: 20px 20px 5px;
+        z-index:5000;
+        background-color: var.$subnav_bg_color;
+
+        ul {
+            margin:0;
+            position:relative;
+            z-index:1200;
+            padding: 0px 0px 0px;
+
+            li {
+                float: left;
+                width: 100%;
+
+                &:hover {
+                    background: transparent;
+                }
+
+                a {
+                    background-image:none;
+                    padding: 0px 0px 15px 0px;
+                    display:block;
+                    background-image:none;    
+                    white-space: normal;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: var.$navy;
+                }
+
+                &.selected {
+                    background: transparent;
+                    
+                    a {
+                        color: #3B5BA9;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        > ul > li > a:hover {
+            color: var.$subnav_item_hover_color;
+            background-color: transparent;
+            background: transparent;
+            font-weight: 700;
+
+            &:after {
+                content: "\f178";
+                font-family: "Font Awesome 6 Pro";
+                font-weight: 900;
+                margin-left: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@use '../base/variables' as var;
+
+// Mixins / Components
+
+@mixin page-title {
+    width: 100%;
+    text-align: center;
+    background-size: cover;
+    min-height: 300px;
+    padding-top: 60px;
+
+    .page-title {
+        h1 {
+            margin-top: 0;
+            margin-bottom: 35px;
+        }
+
+        p {
+            color: #fff;
+            margin: 0 auto;
+            font-size: 20px;
+            line-height: 28px;
+            max-width: 846px;
+        }
+    }
+}
+
+@mixin events-intro-p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+@mixin circle-lines {
+    position: absolute;
+    top: -25px;
+    width: 408px;
+    height: auto;
+    left: -25px;
+    transform: rotate(120deg);    
+}
+
+@mixin slick-arrow-circles {
+    top: 50%;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    line-height: normal;
+    transition: none;
+}
+
+@mixin slick-arrows {
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 900;
+    color: #fff;
+    background: none;
+    font-size: 22px;
+    position: relative;
+    z-index: 10;
+    bottom: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    transition: none;
+}
+
+@mixin alt-callout {
+    padding: 50px !important;
+    font-style: normal !important;
+    font-weight: initial !important;
+    color: initial !important;
+    max-width: 1064px;
+    margin: 0 auto;
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-transform: lowercase;
+    }
+
+    p {
+        margin-bottom: 0 !important;
+        max-width: 846px;
+        margin: 0 auto;
+    }
+}
+
+@mixin rotator-category {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .15em;
+    line-height: 20px;
+    color: var.$purple;
+    margin-bottom: 15px;
+}
+
+@mixin rotator-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var.$navy;
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+
+@mixin rotator-title-lg {
+    font-size: 26px;
+    line-height: 34px;
+}
+
+@mixin rotator-date-time-tags {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .15em;
+    line-height: 20px;
+    color: var.$navy;
+}

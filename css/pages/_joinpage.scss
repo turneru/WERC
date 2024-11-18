@@ -1,0 +1,201 @@
+@use '../base/variables' as var;
+@import '../utilities/components';
+
+//Join Page Styles and Layout
+
+#body-content.join {
+    #join-hero {
+        width: 100%;
+        background: url('../images/home-hero-bg.png'), var.$navy;
+        background-position: top center;
+        background-size: cover;
+        height: 778px;
+    
+        h1 {
+            color: var.$navy;
+            font-size: 90px;
+            margin-top: 159px;
+            margin-bottom: 0;
+    
+            &.line2 {
+                padding-left: 46px;
+                margin-top: 0;
+                margin-bottom: 0px;
+
+                span {
+                    -webkit-text-stroke: 1.5px var.$navy;
+                }
+            }
+        }
+    
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 37px;
+        }
+    
+        p {
+            margin-bottom: 0;
+    
+            .button {
+                margin-bottom: 0;
+            }
+        }
+    
+        .color-wheel {
+            width: 1065px;
+            margin-top: -300px;
+            position: absolute;
+            z-index: 100;
+            margin-left: -83px;
+        }
+    }
+
+    h1 {  
+        margin-bottom: 30px;
+        font-size: 60px;
+        line-height: 72px;
+        margin-top: 0;
+    }
+
+    span {
+        -webkit-text-stroke: 1.5px #fff;
+    }
+
+    #join-top {
+        background: var.$navy;
+        padding-bottom: 73px;
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: #fff;
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    #stat-icons {
+        margin-bottom: 104px;
+        margin-top: -36px;
+
+        #grey-stat, #green-stat,  #red-stat, #yellow-stat {
+            position: relative;
+            right: auto;
+            margin-top: 0;
+            text-align: center;
+        }
+    }
+
+    #video-section {
+        margin-bottom: -100px;
+    }
+
+    #benefits {
+        background: var.$blue;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 25px;
+        }
+
+        .benefits-rotator {
+            margin: 58px 0px 196px;
+    
+            .slick-track {
+                display: flex;
+                align-items: center;
+                min-height: 330px;
+            }
+    
+            .slick-slide {
+                transition: transform .3s cubic-bezier(.4,0,.2,1);
+                position: relative;
+                z-index: 1;
+                width: 462px;
+        
+                &.slick-center {
+                    z-index: 10;
+                    width: 462px;
+    
+                    .benefit-item {
+                        width: 462px;
+                        padding: 50px 35px;
+                        background: #fff;
+                        border-bottom: 10px solid transparent;
+                        position: relative;
+    
+                        // &:hover {
+                        //     transition: none;
+                        //     border-bottom: 10px solid var.$green;
+                        //     cursor: pointer;
+    
+                        //     .title {
+                        //         font-weight: 600;
+                        //     }
+                        // }
+    
+                        .title {
+                            font-size: 26px;
+                            line-height: 34px;
+                        }
+            
+                    }
+                }
+    
+                .benefit-item {
+                    background: rgb(255 255 255 / 75%);
+                    padding: 25px;
+                    margin: 0px auto;
+                    width: 355px;
+                    cursor: pointer;
+        
+                    .title {
+                        @include rotator-title;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                    }
+
+                }
+            }
+        }
+    }
+
+    #join-bottom {
+        margin-top: 40px;
+        margin-bottom: 100px;
+
+        p.blue {
+            font-size: 20px;
+            line-height: 28px;
+            color: var.$navy;
+            margin-bottom: 45px;
+        }
+
+        .callout {
+            padding: 0px 40px 40px;
+            margin: 125px 0px 40px;
+
+            img {
+                margin-top: -75px;
+            }
+
+            h5 {
+                margin-top: 25px;
+                margin-bottom: 10px;
+                font-style: normal;
+            }
+
+            h6 {
+                margin-bottom: 25px;
+                font-style: normal;
+            }
+
+        }
+    }
+
+}

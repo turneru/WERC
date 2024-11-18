@@ -1,0 +1,142 @@
+@use '../base/variables' as var;
+
+/* SearchBoost Styles
+-------------------------------------------------*/
+
+.search-panel {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    transition: visibility 0s, opacity 0.3s linear;
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    background: #68C187;
+    height: 70px;
+    z-index: 999;
+    margin-top: -10.45px;  
+}
+
+.nav-wrapper {
+    position: relative;
+}
+
+.search-panel.show-search {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+#showsearch.active-search {
+    font-weight: 600 !important;
+    border-bottom: 5px solid #68C187 !important;
+}
+
+.bstrap30 .row {
+    margin: 0 !important;
+}
+
+.bstrap30 a:focus, .bstrap30 a:hover {
+    color: var.$purple;
+    text-decoration: none !important;
+}
+
+.bstrap30 .btn-primary {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.bstrap30 .pagination>li>a, .bstrap30 .pagination>li>span {
+    color: var.$purple !important;
+}
+
+.bstrap30 .pagination>.active>a, .bstrap30 .pagination>.active>a:focus, .bstrap30 .pagination>.active>a:hover, .bstrap30 .pagination>.active>span, .bstrap30 .pagination>.active>span:focus, .bstrap30 .pagination>.active>span:hover {
+	color: #fff !important;
+    background-color: var.$purple !important;
+}
+
+.bstrap30 .sb-footer .pagination li::before {
+    content: none !important;
+}
+
+.btn.btn-primary.search-btn {
+	color:  var.$navy !important;
+	border-top-color: transparent!important;
+	border-bottom-color: transparent !important;
+	border-right-color: transparent !important;
+    font-size: 20px;
+	padding: 3px 10px;
+
+    &:hover {
+        background-color: #fff;
+        box-shadow: none;
+    }
+}
+
+.input-group-btn {
+	position: absolute !important;
+    margin-top: -33px !important;
+	z-index: 5;
+    right: 40px;
+}
+
+.bstrap30 .btn {
+    font-size: 15px;
+}
+
+.bstrap30 :after {
+    content: "";
+}
+
+.bstrap30 .form-control {
+	height: 38px;
+}
+
+.bstrap30 .sb-default .input-group span.twitter-typeahead:first-child .form-control,
+.bstrap30 .sb-default .input-group span.twitter-typeahead:not(:first-child):not(:last-child) .form-control {
+    border-radius: 0px;
+	background: #fff !important;
+	border: 0px !important;
+	color: var.$navy !important;
+	padding-left: 24px;
+    width: 100%;
+
+    &::placeholder {
+        color: var.$navy;
+        opacity: 1; /* Firefox */
+    }
+      
+    &::-ms-input-placeholder { /* Edge 12 -18 */
+        color: var.$navy;
+    }
+}
+
+.bstrap30 .sb-default {
+    padding: 0px 0 0px 0; 
+}
+
+.bstrap30 .sb-default .adv-search {
+    max-width: none;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#body-content {
+    .row.sb-default {
+        padding: 20px;
+        background: var.$green;
+        margin-bottom: 20px !important;
+    }
+
+    .bstrap30 .form-control {
+        color: var.$navy;
+        background-color: #fff;
+        background: #fff;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .bstrap30 .sb-default .input-group-btn .btn-group {
+        margin-top: 35px;
+    }
+}
